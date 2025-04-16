@@ -1,9 +1,9 @@
 import {ChangeDetectionStrategy, Component, Input,} from '@angular/core';
 import {Package} from '../dashboard/services/package-api.service';
-import {SplitPathPipe} from '../dashboard/pipe/split-path.pipe';
-import {FormatNumberWithSuffixPipe} from '../dashboard/pipe/format-number-with-suffix.pipe';
+import {SplitPathPipe} from '../dashboard/pipes/split-path.pipe';
+import {FormatNumberWithSuffixPipe} from '../dashboard/pipes/format-number-with-suffix.pipe';
 import {PackageService} from '../package.service';
-import {AsyncPipe, NgClass} from '@angular/common';
+import {AsyncPipe} from '@angular/common';
 import {map, Observable} from 'rxjs';
 
 @Component({
@@ -14,7 +14,6 @@ import {map, Observable} from 'rxjs';
   imports: [
     SplitPathPipe,
     FormatNumberWithSuffixPipe,
-    NgClass,
     AsyncPipe
   ],
   changeDetection: ChangeDetectionStrategy.OnPush

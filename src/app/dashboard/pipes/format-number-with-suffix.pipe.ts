@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FormatNumberWithSuffixPipe implements PipeTransform {
 
-  transform(value: number ): string | number {
+  transform(value: number ): string {
     let result = value.toString().split('')
 
     if (result.length > 4 && result.length < 7) {
@@ -19,7 +19,7 @@ export class FormatNumberWithSuffixPipe implements PipeTransform {
       return result.join('') + 'M'
     }
 
-    return value
+    return value.toString()
   }
 
 }

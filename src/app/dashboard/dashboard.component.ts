@@ -34,9 +34,7 @@ export class DashboardComponent {
         return this.packageApiService.getPackages().pipe(
           map((value) => {
             if (search) {
-              return value.filter((item) => {
-                return item.id.includes(search)
-              })
+              return value.filter((item) => item.id.includes(search))
             }
             return value
           })
@@ -49,7 +47,7 @@ export class DashboardComponent {
   // можно использовать этот вариант.
 
   // ngOnInit() {
-  //   this.dependenciesSubject.pipe(
+  //   this.dependenciesSubject.pipes(
   //     debounceTime(200),
   //     switchMap((id: string) => {
   //       return this.packageApiService.getDependenciesPackages(id)

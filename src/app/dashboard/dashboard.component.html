@@ -12,6 +12,6 @@
 
 @if (packages | async; as data) {
   <div class="dashboard-content">
-    <app-card (mouseenter)="triggerDependencies(item.id)" (mouseleave)="triggerDependencies('')" *ngFor="let item of data" [data]="item"></app-card>
+    <app-card (mouseenter)="triggerDependencies(item.id)" (mouseleave)="triggerDependencies()" *ngFor="let item of data" [data]="item"></app-card>
   </div>
 }
