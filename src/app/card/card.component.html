@@ -1,0 +1,20 @@
+@if (data) {
+  <div [class.card-dependencies-header]="isDependence | async"  class="card-header">
+    @let splitPath = data.id | splitPath ;
+    @if (splitPath.length > 1) {
+      <span class="special-color">{{ splitPath[0] }}</span>
+      <span>{{ splitPath[1] }}</span>
+    } @else {
+      <span>{{ data.id }}</span>
+    }
+  </div>
+
+  <div class="card-content">
+    <div class="downloads-info">
+      <span> {{ data.weeklyDownloads | formatNumberWithSuffix  }} </span>
+      <img class="count-download-icon" alt="count-download" src="assets/icons/download-2-line.svg" height="15px" width="15px">
+    </div>
+    <span class="footer-card-span"> {{ data.dependencyCount }} dependencies</span>
+  </div>
+
+}

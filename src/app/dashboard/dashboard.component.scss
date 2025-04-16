@@ -1,0 +1,63 @@
+@use "../../variables" as var;
+
+:host {
+  display: block;
+  width: 800px;
+  height: 350px;
+  background: var.$base-background-color;
+  overflow-y: scroll;
+  padding: 20px;
+  border: var.$base-border;
+  border-radius: var.$base-radius;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 15px 20px 0;
+}
+
+.input-form {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+  padding: 6px 5px;
+  margin: 0 var.$margin-base 0 0;
+  border-radius: var.$base-radius;
+  border: var.$base-border;
+}
+
+.input-text {
+  width: 90%;
+  height: 100%;
+  font-size: 14px;
+  margin-left: 5px;
+  border: none;
+}
+
+.input-text:focus {
+  outline: none;
+}
+
+.dashboard-content {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: var.$margin-base;
+}
+
+.button-container {
+  display: flex;
+}
+
+.button-refresh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var.$base-radius;
+  background: var.$base-background-color;
+  border: solid 1px #828282;
+  height: 44px;
+  width: 45px;
+}
+
+.button-refresh:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}

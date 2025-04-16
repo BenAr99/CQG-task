@@ -1,0 +1,17 @@
+<div class="button-container">
+  <div class="input-form">
+    <input class="input-text" [formControl]="filter"
+           placeholder="Поиск пользователя">
+  </div>
+
+  <button (click)="reload()" class="button-refresh">
+    <img src="assets/icons/refresh-svgrepo-com.svg" width="20px" height="20px" alt="button-refresh">
+  </button>
+</div>
+
+
+@if (packages | async; as data) {
+  <div class="dashboard-content">
+    <app-card (mouseenter)="triggerDependencies(item.id)" (mouseleave)="triggerDependencies('')" *ngFor="let item of data" [data]="item"></app-card>
+  </div>
+}
